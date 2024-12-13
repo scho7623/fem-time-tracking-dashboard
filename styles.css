@@ -1,0 +1,219 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background: hsl(226, 43%, 10%);
+  font-family: "Rubik", sans-serif;
+  font-weight: 300;
+  color: #fff;
+}
+
+.profile {
+  background: hsl(246, 80%, 60%);
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+  gap: 1rem;
+  border-radius: 1rem;
+}
+
+.profile .avatar {
+  width: 5rem;
+}
+
+.profile .avatar img {
+  max-width: 100%;
+  display: block;
+  border: 3px solid white;
+  border-radius: 3rem;
+}
+
+.profile .label {
+  font-weight: 400;
+  color: hsl(236, 100%, 87%);
+}
+
+.profile .name {
+  font-size: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.filter {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  padding: 2rem;
+}
+
+.filter button {
+  background: none;
+  border: none;
+  color: hsl(235, 45%, 61%);
+  font-size: 1.25rem;
+}
+
+.filter button.active {
+  color: #fff;
+}
+
+.record {
+  background: hsl(235, 46%, 20%);
+  padding: 2rem;
+  border-radius: 1rem 1rem 0 0;
+  position: relative;
+  z-index: 1;
+}
+
+.card {
+  padding-top: 3rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.card:first-child {
+  padding: 0;
+  background: hsl(235, 46%, 20%);
+}
+
+.card > img {
+  position: absolute;
+  top: 0;
+  right: 2rem;
+  z-index: 0;
+}
+
+.work {
+  background: hsl(15, 100%, 70%);
+}
+
+.play {
+  background: hsl(195, 74%, 62%);
+}
+
+.study {
+  background: hsl(348, 100%, 68%);
+}
+
+.exercise {
+  background: hsl(145, 58%, 55%);
+}
+
+.social {
+  background: hsl(264, 64%, 52%);
+}
+
+.self-care {
+  background: hsl(43, 84%, 65%);
+}
+
+.record h2 {
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+
+.record header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.record .current {
+  font-size: 2.5rem;
+}
+
+.record .previous {
+  font-size: 1rem;
+  color: hsl(236, 100%, 87%);
+}
+
+.timeframe {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+@media (min-width: 750px) {
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  main {
+    flex: 1 1 0;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+
+  .card:first-child {
+    grid-row: 1 / 4;
+    grid-column: 1 / 2;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .record header {
+    margin-bottom: 2rem;
+  }
+
+  .timeframe {
+    flex-direction: column;
+    align-items: start;
+    gap: 1rem;
+  }
+
+  .profile {
+    flex-direction: column;
+    align-items: start;
+    flex: 8 8 0;
+  }
+
+  .profile .name {
+    font-size: 2.5rem;
+  }
+
+  .filter {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    flex: 2 2 0;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 1200px) {
+  main {
+    max-width: 1200px;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  .card:first-child {
+    grid-row: 1 / 3;
+    grid-column: 1 / 2;
+  }
+
+  .profile .name {
+    font-size: 3rem;
+  }
+}
